@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Cuti 3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulir Cuti</h1>
+        <form id="leaveForm">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="department">Departemen:</label>
+            <input type="text" id="department" name="department" required>
+
+            <label for="startDate">Tanggal Mulai Cuti:</label>
+            <input type="date" id="startDate" name="startDate" required>
+
+            <label for="endDate">Tanggal Selesai Cuti:</label>
+            <input type="date" id="endDate" name="endDate" required>
+
+            <label for="reason">Alasan Cuti:</label>
+            <textarea id="reason" name="reason" rows="4" required></textarea>
+
+            <label for="contact">Kontak Selama Cuti:</label>
+            <input type="text" id="contact" name="contact" required>
+
+            <h2>Persetujuan</h2>
+            <label>Persetujuan 1:</label>
+            <div class="signature-box" id="signature1">
+                <canvas id="canvas1"></canvas>
+                <button type="button" onclick="clearSignature('canvas1')">Hapus Tanda Tangan</button>
+            </div>
+
+            <label>Persetujuan 2:</label>
+            <div class="signature-box" id="signature2">
+                <canvas id="canvas2"></canvas>
+                <button type="button" onclick="clearSignature('canvas2')">Hapus Tanda Tangan</button>
+            </div>
+
+            <label>Persetujuan 3:</label>
+            <div class="signature-box" id="signature3">
+                <canvas id="canvas3"></canvas>
+                <button type="button" onclick="clearSignature('canvas3')">Hapus Tanda Tangan</button>
+            </div>
+
+            <button type="submit">Kirim</button>
+        </form>
+        
+        <div id="responseMessage" style="margin-top: 20px;"></div>
+        <div id="result" style="margin-top: 20px;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
